@@ -1,15 +1,18 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-const parent = React.createElement("h1",{id:"parent"},
-  [React.createElement("h1",{id:"child"},
-  
-    [React.createElement("h3",{}, "Grand child is me"),
-    React.createElement("h2",{}, "Grand child is me")]),
-    React.createElement("h1",{},"Hello World")])
+const parent = React.createElement("div",{id:"parent"},[
+  React.createElement("div", {id:"child"},[
+    React.createElement("h1",{},"This is Madhan"),
+    React.createElement("h1",{},"TCS"),
+  ]),
 
+  React.createElement("div", {id:"child2"},[
+    React.createElement("h1",{},"This is Madhan1"),
+    React.createElement("h1",{},"TCS1"),
+  ]),
+]);
 
-
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(parent)
-console.log(parent)
+console.log(parent);  //object
+const root = ReactDOM.createRoot(document.createElement("root"))
+root.render(parent);
